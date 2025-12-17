@@ -1,0 +1,108 @@
+---
+import Image from "astro/components/Image.astro"
+import heroTruck from "../../public/hero-truck.png"
+---
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="inicio" class="pt-32 pb-20 bg-gradient-to-br from-[#00A9E0] via-[#0088B8] to-[#0077A8] relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Hero Content -->
+        <div class="fade-in text-white">
+          <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+            <span class="text-sm font-semibold">Servicio de Excelencia desde 2019</span>
+          </div>
+          
+          <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+            Tu carga en <span class="text-white/90">las mejores manos</span>
+          </h2>
+          
+          <p class="text-xl text-white/90 mb-8 leading-relaxed">
+            Más de 2.000 envíos exitosos nos respaldan. Transportamos con puntualidad, cuidado y seguro total.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contacto" class="bg-white text-[#00A9E0] px-8 py-4 rounded-lg font-bold text-lg md:text-lg text-base hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center">
+              Cotizar Gratis Ahora
+            </a>
+            <a href="#servicios" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg md:text-lg text-base hover:bg-white hover:text-[#00A9E0] transition-all inline-flex items-center justify-center">
+              Ver Servicios
+            </a>
+          </div>
+          
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-white/20">
+            <div>
+              <div class="text-2xl md:text-4xl font-bold mb-1" data-counter="6">0</div>
+              <div class="text-sm text-white/80">Años de Experiencia</div>
+            </div>
+            <div>
+              <div class="text-2xl md:text-4xl font-bold mb-1" data-counter="2000">0</div>
+              <div class="text-sm text-white/80">Envíos Realizados</div>
+            </div>
+            <div>
+              <div class="text-2xl md:text-4xl font-bold mb-1" data-counter="98">0</div>
+              <div class="text-sm text-white/80">Satisfacción Cliente</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hero Image -->
+        <div class="relative fade-in ">
+          <div class="relative rounded-2xl overflow-hidden">
+            <Image 
+              src={heroTruck}
+              alt="Camión de RG Cargas en ruta transportando mercadería de forma segura con cielo azul de fondo"
+              class="w-full h-full object-cover drop-shadow-xl"
+            />
+            <!-- <div class="absolute inset-0 bg-gradient-to-t from-[#00A9E0]/20 to-transparent"></div> -->
+          </div>
+          
+          <!-- Floating Cards -->
+          <div class="hidden md:block absolute -top-6 -right-6 bg-white rounded-xl shadow-lg p-4 animate-pulse">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 gradient-racing rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-600">Atención 24/7</div>
+                <div class="font-bold text-gray-900">100% Activo</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hidden md:block absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 gradient-racing rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-gray-600">Entregas Puntuales</div>
+                <div class="font-bold text-gray-900">24/7 Disponible</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:hidden bg-white rounded-xl shadow-lg p-8 flex items-center flex-col gap-4 mt-6">
+            <div class="w-10 h-10 gradient-racing rounded-lg flex items-center justify-center mb-2 scale-150">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+            </div>
+            <span class="text-l">Entregas puntuales</span>
+            <strong class="text-xl p-3 rounded-lg shadow-xl flex items-center gap-2"> <span class="relative animate-pulse text-green-600">•</span> 24/7 <span class="text-green-600">DISPONIBLE</span> </strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,87 @@
+
+    /* Configuración de colores personalizados Racing Club */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+    
+    :root {
+      --racing-blue: #00A9E0;
+      --racing-dark: #1A1D29;
+      --racing-light: #F8FAFB;
+    }
+    
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Animaciones suaves */
+    .fade-in {
+      animation: fadeIn 0.8s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .slide-in-left {
+      animation: slideInLeft 1s ease-out;
+    }
+    
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    section{
+        position: relative;
+        z-index: 10;
+    }
+    
+    /* Animación del menú móvil - Slide down con fade */
+        .mobile-menu-closed {
+            position: absolute;
+            z-index: -1;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateY(-10px);
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.3s ease-in-out,
+                        transform 0.3s ease-in-out;
+        }
+
+        .mobile-menu-open {
+            position: relative;
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.3s ease-in-out,
+                        transform 0.3s ease-in-out;
+        }
+    
+    /* Efectos hover suaves */
+    .hover-scale {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .hover-scale:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 169, 224, 0.2);
+    }
+    
+    /* Gradiente Racing */
+    .gradient-racing {
+      background: linear-gradient(135deg, #00A9E0 0%, #0077A8 100%);
+    }
+    
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Glassmorphism effect */
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+

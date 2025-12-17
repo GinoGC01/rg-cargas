@@ -1,0 +1,273 @@
+---
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RG Cargas - Transporte, Fletes y Mudanzas en Argentina | Cotización Gratis</title>
+  <meta name="description" content="✅ Transporte profesional en Argentina. +6 años de experiencia. Fletes, mudanzas y logística con seguro incluido. Rastreo GPS 24/7. Cotizá sin compromiso.">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="transporte argentina, fletes, mudanzas, logística, cargas, envíos, rastreo GPS, transporte profesional, mudanzas económicas">
+  <meta name="author" content="RG Cargas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.rgcargas.com">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rgcargas.com">
+  <meta property="og:title" content="RG Cargas - Transporte, Fletes y Mudanzas en Argentina">
+  <meta property="og:description" content="✅ Transporte profesional con +6 años de experiencia. Seguro incluido, rastreo GPS 24/7. Cotizá sin compromiso.">
+  <meta property="og:image" content="https://www.rgcargas.com/og-image.jpg">
+  <meta property="og:locale" content="es_AR">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.rgcargas.com">
+  <meta name="twitter:title" content="RG Cargas - Transporte, Fletes y Mudanzas en Argentina">
+  <meta name="twitter:description" content="✅ Transporte profesional con +6 años de experiencia. Seguro incluido, rastreo GPS 24/7.">
+  <meta name="twitter:image" content="https://www.rgcargas.com/twitter-image.jpg">
+  
+  <!-- Geo Tags -->
+  <meta name="geo.region" content="AR-B">
+  <meta name="geo.placename" content="Avellaneda, Buenos Aires">
+  <meta name="geo.position" content="-34.6611;-58.3644">
+  
+  <link rel="icon" type="image/png" href="/favicon.svg">
+
+  <!-- Schema.org markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "RG Cargas",
+    "description": "Empresa de transporte, fletes y mudanzas con más de 15 años de experiencia en Argentina",
+    "url": "https://www.rgcargas.com",
+    "logo": "https://www.rgcargas.com/logo.png",
+    "telephone": "+54-11-4258-7896",
+    "email": "contacto@rgcargas.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Mitre 2450",
+      "addressLocality": "Avellaneda",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "1870",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-34.6611",
+      "longitude": "-58.3644"
+    },
+    "openingHours": "Mo-Fr 08:00-20:00, Sa 09:00-14:00",
+    "priceRange": "$",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Argentina"
+    }
+  }
+  
+  </script>
+	<body class="bg-white text-gray-900 overflow-x-hidden">
+		<slot />
+	</body>
+  <Footer/>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+  <!-- ========== JAVASCRIPT ========== -->
+      <script>
+    // TypeScript-style annotations in JSDoc comments
+    
+    /**
+     * Toggle Mobile Menu with smooth animation
+     * @returns {void}
+     */
+    function toggleMenu(): void {
+      const menu = document.getElementById('mobile-menu') as HTMLElement
+      const menuToggle = document.getElementById('menu-toggle') as HTMLButtonElement
+      const iconOpen = document.getElementById('menu-icon-open') as SVGElement | null
+      const iconClose = document.getElementById('menu-icon-close') as SVGElement | null
+
+      
+      if (!menu || !menuToggle || !iconOpen || !iconClose) return;
+      
+      const isOpen = menu.classList.contains('mobile-menu-open');
+      
+      if (isOpen) {
+        // Cerrar menú
+        menu.classList.remove('mobile-menu-open');
+        menu.classList.add('mobile-menu-closed');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      } else {
+        // Abrir menú
+        menu.classList.remove('mobile-menu-closed');
+        menu.classList.add('mobile-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      }
+    }
+
+	const menuToggleButton = document.getElementById('menu-toggle') as HTMLButtonElement | null;
+	if (menuToggleButton){
+		menuToggleButton.addEventListener('click', toggleMenu);
+	}
+		 
+    
+    /**
+     * Handle form submission
+     * @param {Event} event - Form submit event
+     * @returns {void}
+     */
+    function handleSubmit(event: Event): void {
+      event.preventDefault();
+      
+      // Get form data
+      const form = event.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      // Here you would normally send the data to your backend
+      console.log('Form data:', Object.fromEntries(formData));
+      
+      // Show success message
+      alert('¡Gracias! Recibimos tu consulta. Te contactaremos en menos de 2 horas.');
+      
+      // Reset form
+      form.reset();
+    }
+    
+    // Smooth scroll offset for fixed header
+    document.addEventListener('DOMContentLoaded', (): void => {
+      const links = document.querySelectorAll('a[href^="#"]') as NodeListOf<HTMLAnchorElement>;
+      
+      links.forEach((anchor: HTMLAnchorElement): void => {
+        anchor.addEventListener('click', function (e: Event): void {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href') as string;
+          if (!targetId || targetId === '#') return;
+          
+          const target = document.querySelector(targetId) as HTMLElement | null;
+          
+          if (target) {
+            const offset: number = 80;
+            const targetPosition: number = target.offsetTop - offset;
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            const menu = document.getElementById('mobile-menu') as HTMLElement | null;
+            if (menu && menu.classList.contains('mobile-menu-open')) {
+              toggleMenu();
+            }
+          }
+        });
+      });
+    });
+    
+    // Add scroll effect to header
+    let lastScroll: number = 0;
+    
+    window.addEventListener('scroll', (): void => {
+      const header = document.querySelector('header') as HTMLElement
+      if (!header) return;
+      
+      const currentScroll: number = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.classList.add('shadow-md');
+      } else {
+        header.classList.remove('shadow-md');
+      }
+      
+      lastScroll = currentScroll;
+    });
+    
+    // Intersection Observer for fade-in animations
+    const observerOptions: IntersectionObserverInit = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]): void => {
+      entries.forEach((entry: IntersectionObserverEntry): void => {
+        if (entry.isIntersecting) {
+          const target = entry.target as HTMLElement;
+          target.style.opacity = '1';
+          target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+    
+    // Observe fade-in elements
+    document.addEventListener('DOMContentLoaded', (): void => {
+      const elements = document.querySelectorAll('.fade-in, .slide-in-left') as NodeListOf<HTMLElement>;
+      
+      elements.forEach((el: HTMLElement): void => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(el);
+      });
+    });
+
+    /**
+     * Handle form submission
+     * @param {Element} element - Form submit event
+     * @returns {HTMLDivElement}
+    */
+
+
+        // Counter Animation Function
+    function animateCounter(element:Element, target:number, duration:number = 2000, suffix:string = '') {
+      const start = 0;
+      const increment = target / (duration / 16);
+      let current = start;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current) + suffix;
+      }, 16);
+    }
+
+
+
+    // Intersection Observer for Counter Animation
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          entry.target.classList.add('counted');
+          const value = entry.target.getAttribute('data-counter');
+          const target = parseInt(value || '0', 10);
+          const suffix = target === 98 ? '%' : target === 5000 ? '+' : '+';
+          animateCounter(entry.target, target, 2000, suffix);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    // Observe counter elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('[data-counter]');
+      counters.forEach(counter => counterObserver.observe(counter));
+    });
+  </script>

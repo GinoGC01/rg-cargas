@@ -1,0 +1,62 @@
+---
+
+---
+ 
+ <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-effect shadow-sm">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <div class="w-12 h-12 gradient-racing rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-2xl">RG</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-900">RG Cargas</h1>
+            <p class="text-xs text-gray-600">Transporte Profesional</p>
+          </div>
+        </div>
+        
+        <!-- Navigation Links - Desktop -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#inicio" class="text-gray-700 hover:text-[#00A9E0] transition-colors font-medium">Inicio</a>
+          <a href="#nosotros" class="text-gray-700 hover:text-[#00A9E0] transition-colors font-medium">Nosotros</a>
+          <a href="#servicios" class="text-gray-700 hover:text-[#00A9E0] transition-colors font-medium">Servicios</a>
+          <a href="#contacto" class="text-gray-700 hover:text-[#00A9E0] transition-colors font-medium">Contacto</a>
+          <a href="#terminos" class="text-gray-700 hover:text-[#00A9E0] transition-colors font-medium">Términos</a>
+        </div>
+        
+        <!-- CTA Button -->
+        <a href="#contacto" class="hidden md:block gradient-racing text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all" aria-label="Solicitar cotización de transporte">
+          Solicitar Cotización
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button 
+          id="menu-toggle"
+          class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#00A9E0] rounded-lg p-2" 
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+        >
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <nav id="mobile-menu" class="md:hidden mt-4 pb-4 space-y-3 mobile-menu-closed" aria-label="Menú de navegación móvil">
+        <a href="#inicio" class="block text-gray-700 hover:text-[#00A9E0] transition-colors font-medium py-2">Inicio</a>
+        <a href="#nosotros" class="block text-gray-700 hover:text-[#00A9E0] transition-colors font-medium py-2">Nosotros</a>
+        <a href="#servicios" class="block text-gray-700 hover:text-[#00A9E0] transition-colors font-medium py-2">Servicios</a>
+        <a href="#contacto" class="block text-gray-700 hover:text-[#00A9E0] transition-colors font-medium py-2">Contacto</a>
+        <a href="#terminos" class="block text-gray-700 hover:text-[#00A9E0] transition-colors font-medium py-2">Términos</a>
+        <a href="#contacto" class="block gradient-racing text-white px-6 py-3 rounded-lg font-semibold text-center mt-4 text-sm">
+          Solicitar Cotización
+        </a>
+      </div>
+    </nav>
+  </header>
